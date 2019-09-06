@@ -13,6 +13,7 @@ import { AlbumDescriptionComponent } from './album-description/album-description
 
 import { ShufflePipe } from './shuffle.pipe';
 import { PaginateComponent } from './paginate/paginate.component';
+import { StatistiquesComponent } from './statistiques/statistiques.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PaginateComponent } from './paginate/paginate.component';
     LoginComponent,
     AlbumDescriptionComponent,
     ShufflePipe,
-    PaginateComponent
+    PaginateComponent,
+    StatistiquesComponent
   ],
   imports: [
     BrowserModule,

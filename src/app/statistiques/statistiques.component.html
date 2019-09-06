@@ -1,0 +1,21 @@
+<app-paginate
+(paginate)="paginateParent($event)"
+></app-paginate>
+<button type="button" class="btn btn-outline-primary" (click)="orderByAsc(true)">Ordonner par ordre croissant</button>
+<button type="button" class="btn btn-outline-secondary"(click)="orderByAsc(false)">Ordonner par ordre décroissants</button>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nom de l'album</th>
+        <th scope="col">Moyenne</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let album of albums">
+        <th scope="row">{{album.position}}</th>
+        <td>{{album.album.name}}</td>
+        <td>{{album.album.average}}</td>
+      </tr>
+    </tbody>
+  </table>

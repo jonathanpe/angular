@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AlbumsComponent } from './albums/albums.component';
 import { AlbumDescriptionComponent } from './album-description/album-description.component';
 import { LoginComponent } from './login/login.component';
+import { StatistiquesComponent } from './statistiques/statistiques.component';
 
 const albumsRoutes: Routes = [
   {
@@ -20,6 +21,11 @@ const albumsRoutes: Routes = [
     path: 'login',
     component: LoginComponent,
     data: {state: 'login' }
+  },
+  {
+    path: 'statistiques',
+    component: StatistiquesComponent,
+    data: {state: 'statistiques' }
   },
   {
     path: 'album/:id',

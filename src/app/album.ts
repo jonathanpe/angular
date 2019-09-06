@@ -1,5 +1,7 @@
 export class Album {
     id : string;
+    note:number[];
+    average?:number;
     ref: string;
     name : string;
     title : string;

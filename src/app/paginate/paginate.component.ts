@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter, OnDestroy } from '@angular/core';
 import { AlbumService } from '../album.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-paginate',
@@ -15,7 +16,9 @@ export class PaginateComponent implements OnInit,OnDestroy{
   currentPage: number; // page courante
   numberPages: number = 0; // nombre de page(s)
 
-  constructor(private aS: AlbumService) {
+  constructor(private aS: AlbumService,private router:Router) {
+    console.log(this.router.url)
+    this.perPage = this.router.url == '/statistiques' ? 4 : 3
     this.total = this.aS.count();
     this.aS.sendCurrentNumberPage.subscribe(number=>{
       console.log(number)

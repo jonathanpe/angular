@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { Album } from './album';
 
 @Pipe({
   name: 'shuffle' // nom du pipe à utiliser dans le template

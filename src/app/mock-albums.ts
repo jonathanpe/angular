@@ -19,7 +19,8 @@ export const ALBUMS: Album[] = [
             "sint",
             "cillum"
         ],
-        "status": "off"
+        "status": "off",
+        "note" :  [10, 10, 12, 11, 12, 14, 11, 13, 10, 17]
     },
     {
         "id": "2",
@@ -30,7 +31,8 @@ export const ALBUMS: Album[] = [
         "duration": 480,
         "url": "http://placehold.it/400x400",
         "like": "Much",
-        "status": "off"
+        "status": "off",
+        "note" : [10, 11, 10, 12, 14, 13, 16, 15, 15, 13]
     },
     {
         "id": "3",
@@ -49,7 +51,8 @@ export const ALBUMS: Album[] = [
             "incididunt",
             "amet"
         ],
-        "status": "off"
+        "status": "off",
+        "note" : [10, 11, 12, 10, 11, 11, 11, 16, 12, 13]
     },
     {
         "id": "4",
@@ -69,7 +72,8 @@ export const ALBUMS: Album[] = [
             "mollit",
             "aliqua"
         ],
-        "status": "off"
+        "status": "off",
+        "note" : [12, 12, 13, 14, 13, 12, 18, 14, 14, 16]
     },
     {
         "id": "5",
@@ -80,7 +84,8 @@ export const ALBUMS: Album[] = [
         "duration": 840,
         "url": "http://placehold.it/400x400",
         "like": "Rather",
-        "status": "off"
+        "status": "off",
+        "note" : [12, 12, 12, 14, 14, 13, 12, 15, 13, 17]
     },
     {
         "id": "6",
@@ -100,7 +105,8 @@ export const ALBUMS: Album[] = [
             "irure",
             "fugiat"
         ],
-        "status": "off"
+        "status": "off",
+        "note" : [12, 13, 13, 12, 16, 14, 15, 17, 18, 12]
     },
     {
         "id": "7",
@@ -120,7 +126,8 @@ export const ALBUMS: Album[] = [
             "irure",
             "fugiat"
         ],
-        "status": "off"
+        "status": "off",
+        "note" : [13, 13, 14, 16, 15, 15, 17, 17, 17, 17]
     },
     {
         "id": "8",
@@ -140,7 +147,8 @@ export const ALBUMS: Album[] = [
             "irure",
             "fugiat"
         ],
-        "status": "off"
+        "status": "off",
+        "note" : [13, 14, 14, 14, 16, 17, 19, 18, 13, 16]
     },
     {
         "id": "9",
@@ -160,7 +168,8 @@ export const ALBUMS: Album[] = [
             "irure",
             "fugiat"
         ],
-        "status": "off"
+        "status": "off",
+        "note" : [14, 15, 14, 17, 16, 15, 0, 0, 1, 18]
     },
     {
         "id": "10",
@@ -180,7 +189,8 @@ export const ALBUMS: Album[] = [
             "irure",
             "fugiat"
         ],
-        "status": "off"
+        "status": "off",
+        "note" :  [14, 14, 16, 15, 16, 19, 19, 14, 18, 0]
     }
 ];
 

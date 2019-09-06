@@ -4,6 +4,7 @@ import { Album, List } from './album';
 import { ALBUMS, ALBUM_LISTS } from './mock-albums';
 import { ShufflePipe } from './shuffle.pipe';
 import { Subject } from 'rxjs';
+import { ThrowStmt } from '@angular/compiler';
 
 // type de la fonction d'ordre permet de créer un type function
 type Order = (a: Album, b: Album) => number;
@@ -20,10 +21,13 @@ export class AlbumService {
 
   // factoriser l'ordre pour le service
   defaultOrder: Order = (a, b) => a.duration - b.duration;
-
+  averageAscOrder: Order = (a, b) => b.average - a.average;
+  averageDscOrder: Order = (a, b) => a.average - b.average;
   // On souhaite ici injecter le pipe comme un "service" une dépendance au service AlbumService
   // ce n'est pas forcement classique mais on souhaite le fiare
-  constructor(private shuffleData: ShufflePipe) { }
+  constructor(private shuffleData: ShufflePipe) { 
+  
+  }
 
   getAlbums(order: Order = this.defaultOrder): Album[] { return this.albums.sort(order); }
 
@@ -35,6 +39,22 @@ export class AlbumService {
   getAlbumList(id: string): List {
 
     return this.albumLists.find(list => list.id === id);
+  }
+
+  calculAverages(){
+    this.albums = this.getAlbums().map((album)=>{
+      let currentSum = album.note.reduce((noteA,noteB)=>{
+        return noteA+noteB
+      })
+      let currentAverage = currentSum / album.note.length
+      album.average=currentAverage
+      return album
+    })    
+  }
+
+  orderByNoteAsc(value:boolean){
+    let order = value? this.averageAscOrder : this.averageDscOrder
+    this.albums.sort(order)
   }
 
   initStatus(): void {
@@ -55,6 +75,7 @@ export class AlbumService {
     )
   }
 
+  
   count(): number {
     return this.albums.length;
   }
